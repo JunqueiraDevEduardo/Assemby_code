@@ -1,0 +1,23 @@
+int main(void){
+      int valor1, valor2, resultado;
+      char operador;
+      print_string(“Introduza um valor inteiro: “);
+      valor1 = atoi(read_string());
+      print_string(“Introduza outro valor inteiro: “);
+      valor2 = atoi(read_string());
+      print_string(“Introduza o tipo de operação (x,/,%): “);
+      operador = read_string();
+      // Inicio do bloco de calculo -------
+      if (operador == ‘x’)
+            resultado = valor1 * valor2;
+      else if (operador == ‘/’)
+            resultado = valor1 / valor2;
+      else if (operador == ‘%’)
+            resultado = valor1 % valor2;
+      else{
+            print_string(“Operador desconhecido!”);
+return 1; }
+      // Fim do bloco de calculo ----------
+      print_string(“Resultado: “);
+      printf_int10(resultado);
+return 0; }
